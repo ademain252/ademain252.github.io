@@ -27,5 +27,16 @@ ssh -T git@github.com-me </description>
 baseURL = &amp;#34;ademain252.github.io&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; title = &amp;#34;A demain&amp;#34; theme = &amp;#34;hugo-book&amp;#34; 配置Github #  # create a new repository with name `ademain252.github.io`, change config.toml baseURL to `ademain252.github.io` hugo -D cd public git init git config user.</description>
     </item>
     
+    <item>
+      <title>Hugo</title>
+      <link>https://ademain252.github.io/docs/tools/iterm2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ademain252.github.io/docs/tools/iterm2/</guid>
+      <description>#  iterm2 #  Download: https://iterm2.com/
+Oh-my-zsh #  sh -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;#34; make $HOME/Tools &amp;amp;&amp;amp; cd $HOME/Tools curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors brew install autojump; git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions; git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting; vim ~/.zshrc
+plugins=( git autojump zsh-syntax-highlighting zsh-autosuggestions ) </description>
+    </item>
+    
   </channel>
 </rss>

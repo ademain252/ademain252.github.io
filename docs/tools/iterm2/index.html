@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="#  多账号配置 #  mkdir -p ~/.ssh &amp;&amp; cd ~/.ssh ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me ssh-add -D ssh-add -l # 配置公钥 vi config
-# cmp Host github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa User ademain # me Host github.com-me HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa_me User ademain 测试
-ssh -T git@github.com-me ">
+<meta name="description" content="#  iterm2 #  Download: https://iterm2.com/
+Oh-my-zsh #  sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34; make $HOME/Tools &amp;&amp; cd $HOME/Tools curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors brew install autojump; git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions; git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting; vim ~/.zshrc
+plugins=( git autojump zsh-syntax-highlighting zsh-autosuggestions ) ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Git" />
-<meta property="og:description" content="#  多账号配置 #  mkdir -p ~/.ssh &amp;&amp; cd ~/.ssh ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me ssh-add -D ssh-add -l # 配置公钥 vi config
-# cmp Host github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa User ademain # me Host github.com-me HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa_me User ademain 测试
-ssh -T git@github.com-me " />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Hugo" />
+<meta property="og:description" content="#  iterm2 #  Download: https://iterm2.com/
+Oh-my-zsh #  sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34; make $HOME/Tools &amp;&amp; cd $HOME/Tools curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors brew install autojump; git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions; git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting; vim ~/.zshrc
+plugins=( git autojump zsh-syntax-highlighting zsh-autosuggestions ) " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ademain252.github.io/docs/tools/git/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://ademain252.github.io/docs/tools/iterm2/" /><meta property="article:section" content="docs" />
 
 
 
-<title>Git | A demain</title>
+<title>Hugo | A demain</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css" integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin="anonymous">
@@ -89,7 +89,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/tools/git/" class="active">Git</a>
+    <a href="/docs/tools/git/" class="">Git</a>
   
 
         </li>
@@ -115,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/tools/iterm2/" class="">Hugo</a>
+    <a href="/docs/tools/iterm2/" class="active">Hugo</a>
   
 
         </li>
@@ -162,7 +162,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Git</strong>
+  <strong>Hugo</strong>
 
   <label for="toc-control">
     
@@ -178,7 +178,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#多账号配置">多账号配置</a></li>
+    <li><a href="#iterm2">iterm2</a></li>
+    <li><a href="#oh-my-zsh">Oh-my-zsh</a></li>
   </ul>
 </nav>
 
@@ -195,32 +196,28 @@ https://github.com/alex-shpak/hugo-book
   
   <a class="anchor" href="#heading">#</a>
 </h1>
-<h2 id="多账号配置">
-  多账号配置
-  <a class="anchor" href="#%e5%a4%9a%e8%b4%a6%e5%8f%b7%e9%85%8d%e7%bd%ae">#</a>
+<h2 id="iterm2">
+  iterm2
+  <a class="anchor" href="#iterm2">#</a>
 </h2>
-<pre tabindex="0"><code>mkdir -p ~/.ssh &amp;&amp; cd ~/.ssh
-ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa
-ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me
-ssh-add -D
-ssh-add -l
-# 配置公钥
-</code></pre><p>vi config</p>
-<pre tabindex="0"><code># cmp
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/github_id_rsa
-User ademain
-
-# me
-Host github.com-me
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/github_id_rsa_me
-User ademain
-</code></pre><p>测试</p>
-<pre tabindex="0"><code>ssh -T git@github.com-me
+<p>Download: <code>https://iterm2.com/</code></p>
+<h2 id="oh-my-zsh">
+  Oh-my-zsh
+  <a class="anchor" href="#oh-my-zsh">#</a>
+</h2>
+<pre tabindex="0"><code>sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34;
+make $HOME/Tools &amp;&amp; cd $HOME/Tools
+curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
+</code></pre><pre tabindex="0"><code>brew install autojump;
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions;
+git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting;
+</code></pre><p>vim ~/.zshrc</p>
+<pre tabindex="0"><code>plugins=(
+    git
+    autojump
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
 </code></pre></article>
  
       
@@ -262,7 +259,8 @@ User ademain
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#多账号配置">多账号配置</a></li>
+    <li><a href="#iterm2">iterm2</a></li>
+    <li><a href="#oh-my-zsh">Oh-my-zsh</a></li>
   </ul>
 </nav>
 

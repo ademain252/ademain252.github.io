@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="#  搭建 #  brew install hugo &amp;&amp; hugo new site bonvoyage cd bonvoyage &amp;&amp; git init git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book echo theme = \&#39;hugo-book\&#39; &gt;&gt; config.toml hugo new docs/hugo.md hugo server -D 配置 #  vim config.toml
+baseURL = &#34;ademain252.github.io&#34; languageCode = &#34;zh-CN&#34; title = &#34;A demain&#34; theme = &#34;hugo-book&#34; 配置Github #  # create a new repository with name `ademain252.github.io`, change config.toml baseURL to `ademain252.github.io` hugo -D cd public git init git config user.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Hugo" />
+<meta property="og:description" content="#  搭建 #  brew install hugo &amp;&amp; hugo new site bonvoyage cd bonvoyage &amp;&amp; git init git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book echo theme = \&#39;hugo-book\&#39; &gt;&gt; config.toml hugo new docs/hugo.md hugo server -D 配置 #  vim config.toml
+baseURL = &#34;ademain252.github.io&#34; languageCode = &#34;zh-CN&#34; title = &#34;A demain&#34; theme = &#34;hugo-book&#34; 配置Github #  # create a new repository with name `ademain252.github.io`, change config.toml baseURL to `ademain252.github.io` hugo -D cd public git init git config user." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ademain252.github.io/docs/tools/hugo/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Hugo | A demain</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css" integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.ee552556fd1cc852204168ebee6c9591970ee73ef1e13015e3b5c76ad38d4a6a.js" integrity="sha256-7lUlVv0cyFIgQWjr7myVkZcO5z7x4TAV47XHatONSmo=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>A demain</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Tools</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tools/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tools/hugo/" class="active">Hugo</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Hugo</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#搭建">搭建</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#配置github">配置Github</a></li>
+    <li><a href="#配置github-action">配置Github Action</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="搭建">
+  搭建
+  <a class="anchor" href="#%e6%90%ad%e5%bb%ba">#</a>
+</h2>
+<pre tabindex="0"><code>brew install hugo &amp;&amp; hugo new site bonvoyage
+cd bonvoyage &amp;&amp; git init 
+git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+echo theme = \&#39;hugo-book\&#39; &gt;&gt; config.toml
+hugo new docs/hugo.md
+hugo server -D
+</code></pre><h2 id="配置">
+  配置
+  <a class="anchor" href="#%e9%85%8d%e7%bd%ae">#</a>
+</h2>
+<p>vim config.toml</p>
+<pre tabindex="0"><code>baseURL = &#34;ademain252.github.io&#34;
+languageCode = &#34;zh-CN&#34;
+title = &#34;A demain&#34;                     
+theme = &#34;hugo-book&#34;
+</code></pre><h2 id="配置github">
+  配置Github
+  <a class="anchor" href="#%e9%85%8d%e7%bd%aegithub">#</a>
+</h2>
+<pre tabindex="0"><code># create a new repository with name `ademain252.github.io`, change config.toml baseURL to `ademain252.github.io`
+hugo -D
+cd public
+git init
+git config user.name &#34;ademain&#34; &amp;&amp; git config user.email &#34;ademain0612@gmail.com&#34;
+git add . &amp;&amp; git commit -a -m &#34;first commit&#34;
+git log --pretty=&#34;%H %an &lt;%ae&gt;&#34;
+git remote add origin git@github.com-hugo:ademain252/ademain252.github.io.git
+cat .git/config
+git push -u origin master
+</code></pre><h2 id="配置github-action">
+  配置Github Action
+  <a class="anchor" href="#%e9%85%8d%e7%bd%aegithub-action">#</a>
+</h2>
+<pre tabindex="0"><code>ssh-keygen -t rsa -b 4096 -C &#34;ademain0612@gmail.com&#34;
+# 指定的文件, /Users/niconi/.ssh/id_rsa_hugo_deploy
+</code></pre><p>ademain252.github.io (public)</p>
+<ul>
+<li>配置public key到Deploy keys</li>
+</ul>
+<p>ademain252.github.io.blog (private)</p>
+<ul>
+<li>配置private key到Secrets Actions, 设置 ACTION_DEPLOY_KEY</li>
+<li>配置Actions脚本</li>
+</ul>
+<h2 id="参考">
+  参考
+  <a class="anchor" href="#%e5%8f%82%e8%80%83">#</a>
+</h2>
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+<li><a href="https://github.com/alex-shpak/hugo-book">https://github.com/alex-shpak/hugo-book</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#搭建">搭建</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#配置github">配置Github</a></li>
+    <li><a href="#配置github-action">配置Github Action</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

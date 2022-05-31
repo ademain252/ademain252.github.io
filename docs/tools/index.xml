@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>A demain</title><link>ademain252.github.io/docs/tools/</link><description>Recent content on A demain</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="ademain252.github.io/docs/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Git</title><link>ademain252.github.io/docs/tools/git/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>ademain252.github.io/docs/tools/git/</guid><description> 多账号配置 mkdir -p ~/.ssh &amp;amp;&amp;amp; cd ~/.ssh ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me ssh-add -D ssh-add -l # 配置公钥 vi config
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A demain</title>
+    <link>https://ademain252.github.io/docs/tools/</link>
+    <description>Recent content on A demain</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language><atom:link href="https://ademain252.github.io/docs/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>https://ademain252.github.io/docs/tools/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ademain252.github.io/docs/tools/git/</guid>
+      <description>#  多账号配置 #  mkdir -p ~/.ssh &amp;amp;&amp;amp; cd ~/.ssh ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me ssh-add -D ssh-add -l # 配置公钥 vi config
 # cmp Host github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa User ademain # me Host github.com-me HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa_me User ademain 测试
-ssh -T git@github.com-me</description></item><item><title>Hugo</title><link>ademain252.github.io/docs/tools/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>ademain252.github.io/docs/tools/hugo/</guid><description>搭建 brew install hugo &amp;amp;&amp;amp; hugo new site bonvoyage cd bonvoyage &amp;amp;&amp;amp; git init git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book echo theme = \&amp;#39;hugo-book\&amp;#39; &amp;gt;&amp;gt; config.toml hugo new docs/hugo.md hugo server -D 配置 vim config.toml
-baseURL = &amp;#34;ademain252.github.io&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; title = &amp;#34;A demain&amp;#34; theme = &amp;#34;hugo-book&amp;#34; 配置Github # create a new repository with name `ademain252.github.io`, change config.toml baseURL to `ademain252.github.io` hugo -D cd public git init git config user.</description></item></channel></rss>
+ssh -T git@github.com-me </description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://ademain252.github.io/docs/tools/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ademain252.github.io/docs/tools/hugo/</guid>
+      <description>#  搭建 #  brew install hugo &amp;amp;&amp;amp; hugo new site bonvoyage cd bonvoyage &amp;amp;&amp;amp; git init git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book echo theme = \&amp;#39;hugo-book\&amp;#39; &amp;gt;&amp;gt; config.toml hugo new docs/hugo.md hugo server -D 配置 #  vim config.toml
+baseURL = &amp;#34;ademain252.github.io&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; title = &amp;#34;A demain&amp;#34; theme = &amp;#34;hugo-book&amp;#34; 配置Github #  # create a new repository with name `ademain252.github.io`, change config.toml baseURL to `ademain252.github.io` hugo -D cd public git init git config user.</description>
+    </item>
+    
+  </channel>
+</rss>

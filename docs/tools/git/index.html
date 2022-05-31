@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="#  多账号配置 #  mkdir -p ~/.ssh &amp;&amp; cd ~/.ssh ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me ssh-add -D ssh-add -l # 配置公钥 vi config
+# cmp Host github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa User ademain # me Host github.com-me HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa_me User ademain 测试
+ssh -T git@github.com-me ">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Git" />
+<meta property="og:description" content="#  多账号配置 #  mkdir -p ~/.ssh &amp;&amp; cd ~/.ssh ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me ssh-add -D ssh-add -l # 配置公钥 vi config
+# cmp Host github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa User ademain # me Host github.com-me HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/github_id_rsa_me User ademain 测试
+ssh -T git@github.com-me " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ademain252.github.io/docs/tools/git/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Git | A demain</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css" integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.ee552556fd1cc852204168ebee6c9591970ee73ef1e13015e3b5c76ad38d4a6a.js" integrity="sha256-7lUlVv0cyFIgQWjr7myVkZcO5z7x4TAV47XHatONSmo=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>A demain</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Tools</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tools/git/" class="active">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tools/hugo/" class="">Hugo</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Git</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#多账号配置">多账号配置</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h1>
+<h2 id="多账号配置">
+  多账号配置
+  <a class="anchor" href="#%e5%a4%9a%e8%b4%a6%e5%8f%b7%e9%85%8d%e7%bd%ae">#</a>
+</h2>
+<pre tabindex="0"><code>mkdir -p ~/.ssh &amp;&amp; cd ~/.ssh
+ssh-keygen -t rsa -C cmp@abc.com -f ~/.ssh/github_id_rsa
+ssh-keygen -t rsa -C me@abc.com -f ~/.ssh/github_id_rsa_me
+ssh-add -D
+ssh-add -l
+# 配置公钥
+</code></pre><p>vi config</p>
+<pre tabindex="0"><code># cmp
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/github_id_rsa
+User ademain
+
+# me
+Host github.com-me
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/github_id_rsa_me
+User ademain
+</code></pre><p>测试</p>
+<pre tabindex="0"><code>ssh -T git@github.com-me
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#多账号配置">多账号配置</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
